@@ -1,0 +1,7 @@
+[user]
+	name = Christoffer Dall
+	email = cdall@cs.columbia.edu
+[color]
+	status = auto
+	diff = auto
+	branch = auto
