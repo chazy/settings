@@ -5,7 +5,11 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 # Custom prompt coloring
 ################################################################################
 SHORT_HOST=`hostname | sed 's/\..*//'`
-PS1='\[\033[01;32m\]$SHORT_HOST:\w\[\033[00m\]\$ '
+if [[ "`uname`" == "Darwin" ]]; then
+	PS1='\[\033[01;32m\]$SHORT_HOST:\w\[\033[00m\]\$ '
+else
+	PS1='\[\033[01;34m\]$SHORT_HOST:\w\[\033[00m\]\$ '
+fi
 
 ################################################################################
 # Custom PATH configuration
