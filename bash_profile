@@ -29,3 +29,23 @@ export ARCH=arm
 #export CROSS_COMPILE=arm-eabi-
 export MENUCONFIG_COLOR=blackbg
 
+################################################################################
+# Back ports settings
+################################################################################
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
+################################################################################
+# Poser specific settings
+################################################################################
+mountPoser() { hdiutil attach -quiet -mountpoint ~/src/poser ~/src/poser.sparsebundle; }
+
+export PATH=$PATH:~/bin
+export COLUMBIA_POSER_ROOT=/Users/christoffer/src/poser
+function poser-droid() {
+	export ANDROID_ROOT=$COLUMBIA_POSER_ROOT
+	export ANDROID_IMGS=$COLUMBIA_POSER_ROOT/imgs
+	export ANDROID_KERNEL_DIR=$COLUMBIA_POSER_ROOT/kernel
+	pushd $ANDROID_ROOT
+	source ./source-me.sh $@
+	popd
+}
