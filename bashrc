@@ -29,7 +29,8 @@ export GIT_COMMITTER_EMAIL="cdall@cs.columbia.edu"
 # Linux compilation settings 
 ################################################################################
 export ARCH=arm
-#export CROSS_COMPILE=arm-eabi-
+export CROSS_COMPILE=arm-none-linux-gnueabi-
+export PATH=$PATH:~/tools/arm-2010.09/bin
 export MENUCONFIG_COLOR=blackbg
 
 # MacPorts Installer addition on 2009-10-22_at_18:18:27: adding an appropriate PATH variable for use with MacPorts.
