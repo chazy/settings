@@ -38,13 +38,12 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 ################################################################################
-# Subversion Settings
+# KVM/ARM environment
 ################################################################################
 
-export SVN_EDITOR=vim
-function svnAddAll {
-	IFS=$'\n';
-	for file in `svn status | grep '^\?.*' | sed -e 's/^\?[ \t]*//'`        
-		do svn add "$file"
-	done
+function kvmarm_env()
+{
+	export PATH=$PATH:~/x-tools/arm-unknown-eabi/bin
+	export CROSS_COMPILE=arm-unknown-eabi-
+	export ARCH=arm
 }
