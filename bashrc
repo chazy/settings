@@ -46,4 +46,9 @@ function kvmarm_env()
 	export PATH=$PATH:~/x-tools/arm-unknown-eabi/bin
 	export CROSS_COMPILE=arm-unknown-eabi-
 	export ARCH=arm
+
+	export GIT_AUTHOR_NAME="Christoffer Dall"
+	export GIT_AUTHOR_EMAIL="c.dall@virtualopensystems.com"
+	export GIT_COMMITTER_NAME="Christoffer Dall"
+	export GIT_COMMITTER_EMAIL="c.dall@virtualopensystems.com"
 }
