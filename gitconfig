@@ -1,7 +1,14 @@
-[user]
-	name = Christoffer Dall
-	email = cdall@cs.columbia.edu
 [color]
-	status = auto
-	diff = auto
-	branch = auto
+	ui = auto
+[rebase]
+	autosquash = true
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = c.dall@virtualopensystems.com
+	smtpserverport = 587
+[stgit]
+	sender = Christoffer Dall <c.dall@virtualopensystems.com>
+	smtpserver = smtp.gmail.com:587
+	smtptls = yes
+	smtpuser = c.dall@virtualopensystems.com
