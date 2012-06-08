@@ -12,3 +12,5 @@
 	smtpserver = smtp.gmail.com:587
 	smtptls = yes
 	smtpuser = c.dall@virtualopensystems.com
+[core]
+	excludesfile = ~/.gitignore
