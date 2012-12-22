@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo -n "Use writeable git remotes (requires appropriate public SSH key) (y/N): "
+read WRITABLE
+
+if [[ "$WRITABLE" == "y" || "$WRITABLE" == "Y" ]]; then
+	GITHUB_URL="git@github.com:chazy"
+else
+	GITHUB_URL="git://github.com/chazy"
+fi
+
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
 sudo apt-get install zsh tmux vim git curl cscope build-essential gcc-4.6-arm-linux-gnueabi minicom libncurses-dev
@@ -10,7 +19,7 @@ echo -e "=============================="
 if [[ ! -f ~/.vimrc ]]; then
 	cd $HOME
 	rm -f ~/.vimrc ~/.gvimrc ~/.vim
-	git clone git@github.com:chazy/vim-config.git .vim
+	git clone $GITHUB_URL/vim-config.git .vim
 	cd .vim
 	git submodule init
 	git submodule update
@@ -27,7 +36,7 @@ echo -e "==============================="
 if [[ ! -f ~/.tmux-config ]]; then
 	cd $HOME
 	rm -rf ~/.tmux
-	git clone git@github.com:chazy/tmux-config.git .tmux
+	git clone $GITHUB_URL/tmux-config.git .tmux
 	cd .tmux
 	make install
 	cd $HOME
@@ -40,7 +49,7 @@ echo -e "===============================\n"
 if [[ ! -f ~/.zshrc ]]; then
 	cd $HOME
 	rm -rf ~/.oh-my-zsh
-	git clone git@github.com:chazy/zsh-config.git .oh-my-zsh
+	git clone $GITHUB_URL/zsh-config.git .oh-my-zsh
 	cd .oh-my-zsh
 	cd $HOME
 	ln -s .oh-my-zsh/zshrc .zshrc
