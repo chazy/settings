@@ -7,6 +7,8 @@
 	smtpserver = smtp.gmail.com
 	smtpuser = c.dall@virtualopensystems.com
 	smtpserverport = 587
+	aliasesfile = ~/.settings/aliases
+	aliasfiletype = mutt
 [stgit]
 	sender = Christoffer Dall <c.dall@virtualopensystems.com>
 	smtpserver = smtp.gmail.com:587
