@@ -5,15 +5,14 @@
 [sendemail]
 	smtpencryption = tls
 	smtpserver = smtp.gmail.com
-	smtpuser = c.dall@virtualopensystems.com
 	smtpserverport = 587
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
 [stgit]
-	sender = Christoffer Dall <c.dall@virtualopensystems.com>
+	sender = Christoffer Dall <cdall@cs.columbia.edu>
 	smtpserver = smtp.gmail.com:587
 	smtptls = yes
-	smtpuser = c.dall@virtualopensystems.com
+	smtpuser = christofferdall@christofferdall.dk
 [push]
 	default = upstream
 [core]

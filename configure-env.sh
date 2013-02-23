@@ -58,5 +58,15 @@ else
 	echo -e "existing .zshrc, moving on...\n"
 fi
 
+echo -e "\nTaking care of your mutt config"
+echo -e "===============================\n"
+if [[ ! -f ~/.muttrc ]]; then
+	cd $HOME
+	ln -s .settings/muttrc .muttrc
+	mkdir -p .mutt/cache/bodies
+	mkdir -p .mutt/cache/headers
+else
+	echo -e "existing .muttrc, moving on...\n"
+fi
 
 echo "Done, happy coding!"

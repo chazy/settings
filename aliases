@@ -2,6 +2,7 @@ alias lakml linux-arm-kernel@lists.infradead.org
 alias kvm kvm@vger.kernel.org
 alias lkml linux-kernel@vger.kernel.org
 alias kvmarm kvmarm@lists.cs.columbia.edu
+alias linux-omap linux-omap@vger.kernel.org
 alias marc Marc Zyngier <marc.zyngier@arm.com>
 alias will Will Deacon <will.deacon@arm.com>
 alias peter Peter Maydell <peter.maydell@linaro.org>
