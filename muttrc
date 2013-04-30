@@ -50,6 +50,23 @@ macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred mes
 macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
 macro index,pager gk "<change-folder>=KVM ARM<enter>" "Go to KVM ARM"
 
+# Make pager behave like vi
+bind pager j next-line
+bind pager k previous-line
+bind pager h exit
+bind pager l view-attachments
+bind pager \cd half-down
+bind pager \cf next-page
+bind pager \cu half-up
+bind pager \cb previous-page
+bind pager <down> next-line
+bind pager <up> previous-line
+bind pager <left> exit
+bind pager <right> view-attachments
+bind pager H display-toggle-weed
+set pager_stop
+
 # Other shortcuts
 bind index "^" imap-fetch-mail
-bind index R group-reply
+bind index,pager R group-reply
+bind index h noop
