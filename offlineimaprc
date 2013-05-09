@@ -1,0 +1,29 @@
+[general]
+ui=blinkenlights
+accounts = private
+
+[Account private]
+localrepository = local
+remoterepository = remote
+maxage = 90
+
+[Repository local]
+type = Maildir
+localfolders = ~/.mail/private
+
+[Repository remote]
+type = Gmail
+remoteuser = christofferdall@christofferdall.dk
+remotepass = secret
+realdelete = no
+cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+
+folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
+
+nametrans = lambda folder: re.sub('.*Spam$', 'spam', 
+	re.sub('.*Drafts$', 'drafts', 
+	re.sub('.*Sent Mail$', 'sent', 
+	re.sub('.*Starred$', 'flagged', 
+	re.sub('.*Trash$', 'trash', 
+	re.sub('.*All Mail$', 'archive',
+	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))

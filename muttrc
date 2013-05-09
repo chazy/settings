@@ -1,12 +1,12 @@
 # A basic .muttrc for use with Gmail
 
-# Change the following six lines to match your Gmail account details
-set imap_user = "christofferdall@christofferdall.dk"
-set imap_pass = "MYPASS"
-set smtp_url = "smtp://christofferdall@christofferdall.dk@smtp.gmail.com:587/"
-set smtp_pass = "MYPASS"
-set from = "cdall@cs.columbia.edu"
-set realname = "Christoffer Dall"
+# Maildir config (for use with offlineimap)
+set mbox_type = Maildir
+set sendmail = /usr/bin/msmtp
+set folder = ~/.mail/private
+set spoolfile = "+INBOX"
+set postponed = "+drafts"
+unset record
 
 # Change the following line to a different editor you prefer.
 set editor = "vim"
@@ -14,17 +14,7 @@ set editor = "vim"
 # Don't add mail to sent mails
 set copy = no
 
-# Basic config, you can leave this as is
-set folder = "imaps://imap.gmail.com:993"
-set spoolfile = "+INBOX"
-set imap_check_subscribed
-set hostname = gmail.com
-set mail_check = 120
-set timeout = 300
-set imap_keepalive = 300
-set postponed = "+[Gmail]/Drafts"
-set header_cache=~/.mutt/cache/headers
-set message_cachedir=~/.mutt/cache/bodies
+# Basic config
 set certificate_file=~/.mutt/certificates
 set move = no
 set include
@@ -42,13 +32,9 @@ bind editor ^T complete
 bind editor <space> noop 
 
 # Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[Gmail]/Trash\"\n <delete-message>" "Gmail delete message"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
-macro index,pager gk "<change-folder>=KVM ARM<enter>" "Go to KVM ARM"
+macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to INBOX"
+macro index,pager gs "<change-folder>=sent<enter>" "Go to sent"
 
 # Make pager behave like vi
 bind pager j next-line
@@ -67,6 +53,5 @@ bind pager H display-toggle-weed
 set pager_stop
 
 # Other shortcuts
-bind index "^" imap-fetch-mail
 bind index,pager R group-reply
 bind index h noop
