@@ -1,5 +1,7 @@
 [color]
 	ui = auto
+[log]
+	decorate = short
 [rebase]
 	autosquash = true
 [sendemail]
@@ -8,6 +10,7 @@
 	smtpserverport = 587
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
+	smtpuser = christofferdall@christofferdall.dk
 [stgit]
 	sender = Christoffer Dall <cdall@cs.columbia.edu>
 	smtpserver = smtp.gmail.com:587
