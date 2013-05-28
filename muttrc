@@ -8,6 +8,8 @@ set spoolfile = "+INBOX"
 set postponed = "+drafts"
 unset record
 
+set from = 'Christoffer Dall <cdall@cs.columbia.edu>'
+
 # Change the following line to a different editor you prefer.
 set editor = "vim"
 
@@ -30,17 +32,21 @@ auto_view text/html
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
+unset mark_old		# don't mark new messages as old
 
 # Gmail-style keyboard shortcuts
 macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent<enter>" "Go to sent"
+macro index,pager gf "<change-folder>=flagged<enter>" "Go to flagged"
 
 # Make pager behave like vi
 bind pager j next-line
 bind pager k previous-line
 bind pager h exit
 bind pager l view-attachments
+bind pager p previous-entry
+bind pager n next-entry
 bind pager \cd half-down
 bind pager \cf next-page
 bind pager \cu half-up
@@ -52,6 +58,14 @@ bind pager <right> view-attachments
 bind pager H display-toggle-weed
 set pager_stop
 
+# Make index behave a little more like vi
+bind index \cd next-page
+bind index \cu previous-page
+bind index ~ previous-unread
+
 # Other shortcuts
 bind index,pager R group-reply
 bind index h noop
+
+# Set color scheme
+source ~/.mutt-colors-solarized-dark-256.muttrc
