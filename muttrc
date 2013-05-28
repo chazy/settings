@@ -68,4 +68,4 @@ bind index,pager R group-reply
 bind index h noop
 
 # Set color scheme
-source ~/.mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt-colors.muttrc
