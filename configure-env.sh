@@ -11,7 +11,7 @@ fi
 
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
-sudo apt-get install zsh tmux vim git curl cscope build-essential gcc-4.6-arm-linux-gnueabi minicom libncurses-dev
+sudo apt-get install zsh tmux vim git curl cscope build-essential gcc-4.6-arm-linux-gnueabi minicom libncurses-dev mutt offlineimap msmtp
 
 echo -e "\nTaking care of your vim config"
 echo -e "=============================="
@@ -62,9 +62,23 @@ echo -e "\nTaking care of your mutt config"
 echo -e "===============================\n"
 if [[ ! -f ~/.muttrc ]]; then
 	cd $HOME
-	ln -s .settings/muttrc .muttrc
+	cd .settings
+	git submodule init
+	git submodule update
+	cd ..
+	cp .settings/muttrc .muttrc
 	mkdir -p .mutt/cache/bodies
 	mkdir -p .mutt/cache/headers
+	mkdir -p .mail/private
+	ln -s .settings/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc .mutt-colors.muttrc
+	mkdir -p .bin
+	cp .settings/mailrun.sh ~/bin/.
+	chmod a+x ~/bin/mailrun.sh
+	cp .settings/msmtprc ~/.msmtprc
+	cp .settings/offlineimaprc ~/.offlineimaprc
+	echo "Replace 'secret' with your actual password in:"
+	echo "    ~/.offlineimaprc"
+	echo "    ~/.msmtprc"
 else
 	echo -e "existing .muttrc, moving on...\n"
 fi
