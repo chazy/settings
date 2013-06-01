@@ -2,13 +2,18 @@
 
 # Maildir config (for use with offlineimap)
 set mbox_type = Maildir
-set sendmail = /usr/bin/msmtp
-set folder = ~/.mail/private
-set spoolfile = "+INBOX"
-set postponed = "+drafts"
 unset record
 
-set from = 'Christoffer Dall <cdall@cs.columbia.edu>'
+# Default folders
+set folder = ~/.mail/personal
+set spoolfile = "+INBOX"
+set postponed = "+drafts"
+
+macro index <f2> '<change-folder>~/.mail/personal/INBOX<enter>'
+macro index <f3> '<change-folder>~/.mail/linaro/INBOX<enter>'
+
+folder-hook ~/.mail/personal source ~/.settings/personal.muttrc
+folder-hook ~/.mail/linaro source ~/.settings/linaro.muttrc
 
 # Change the following line to a different editor you prefer.
 set editor = "vim"
@@ -18,6 +23,8 @@ set copy = no
 
 # Basic config
 set certificate_file=~/.mutt/certificates
+set alias_file=~/.settings/aliases
+source $alias_file
 set move = no
 set include
 set sort = 'threads'
@@ -69,3 +76,7 @@ bind index h noop
 
 # Set color scheme
 source ~/.mutt-colors.muttrc
+
+# Set GPG decrypt settings
+set smime_is_default="no"
+source ~/.settings/gpg.muttrc

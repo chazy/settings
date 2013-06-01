@@ -1,17 +1,22 @@
 [general]
 ui=blinkenlights
-accounts = private
+accounts = personal,linaro
 
-[Account private]
-localrepository = local
-remoterepository = remote
+
+#############################################################################
+# Personal Account
+#
+
+[Account personal]
+localrepository = local_personal
+remoterepository = remote_personal
 maxage = 90
 
-[Repository local]
+[Repository local_personal]
 type = Maildir
-localfolders = ~/.mail/private
+localfolders = ~/.mail/personal
 
-[Repository remote]
+[Repository remote_personal]
 type = Gmail
 remoteuser = christofferdall@christofferdall.dk
 remotepass = secret
@@ -20,10 +25,42 @@ cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 
 folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
 
-nametrans = lambda folder: re.sub('.*Spam$', 'spam', 
-	re.sub('.*Drafts$', 'drafts', 
-	re.sub('.*Sent Mail$', 'sent', 
-	re.sub('.*Starred$', 'flagged', 
-	re.sub('.*Trash$', 'trash', 
+nametrans = lambda folder: re.sub('.*Spam$', 'spam',
+	re.sub('.*Drafts$', 'drafts',
+	re.sub('.*Sent Mail$', 'sent',
+	re.sub('.*Starred$', 'flagged',
+	re.sub('.*Trash$', 'trash',
+	re.sub('.*All Mail$', 'archive',
+	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))
+
+
+
+#############################################################################
+# Linaro Account
+#
+
+[Account linaro]
+localrepository = local_linaro
+remoterepository = remote_linaro
+maxage = 90
+
+[Repository local_linaro]
+type = Maildir
+localfolders = ~/.mail/linaro
+
+[Repository remote_linaro]
+type = Gmail
+remoteuser = christoffer.dall@linaro.org
+remotepass = secret
+realdelete = no
+cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+
+folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
+
+nametrans = lambda folder: re.sub('.*Spam$', 'spam',
+	re.sub('.*Drafts$', 'drafts',
+	re.sub('.*Sent Mail$', 'sent',
+	re.sub('.*Starred$', 'flagged',
+	re.sub('.*Trash$', 'trash',
 	re.sub('.*All Mail$', 'archive',
 	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))
