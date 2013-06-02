@@ -1,4 +1,5 @@
 set from = "Christoffer Dall <christoffer.dall@linaro.org>"
 set sendmail = "/usr/bin/msmtp -a linaro"
+set folder = ~/.mail/linaro
 set spoolfile = "+INBOX"
 set postponed = "+drafts"
