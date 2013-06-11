@@ -12,7 +12,6 @@ set postponed = "+drafts"
 
 macro index <f2> '<change-folder>~/.mail/personal/INBOX<enter>'
 macro index <f3> '<change-folder>~/.mail/linaro/INBOX<enter>'
-macro index <f4> 'set sendmail = "/usr/bin/msmtp -a linaro"'
 
 folder-hook ~/.mail/personal source ~/.settings/personal.muttrc
 folder-hook ~/.mail/linaro source ~/.settings/linaro.muttrc
