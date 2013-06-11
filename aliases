@@ -12,3 +12,9 @@ alias marcelo Marcelo Tosatti <mtosatti@redhat.com>
 alias rmk Russell King <linux@arm.linux.org.uk>
 alias linus Linus Torvalds <torvalds@linux-foundation.org>
 alias catalin Catalin Marinas <catalin.marinas@arm.com>
+alias richard Richard Phelan <richard.phelan@arm.com>
+alias serge Serge Broslavsky <serge.broslavsky@linaro.org>
+alias mark Mark Burton <mark.burton@greensocs.com>
+alias fred Fred Konrad <fred.konrad@greensocs.com>
+alias geoff Geoff Levand <geoff.levand@linaro.org>
+alias kvmminutes marc, peter, richard, serge, mark, fred, geoff
