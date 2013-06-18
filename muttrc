@@ -41,6 +41,7 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop 
 unset mark_old		# don't mark new messages as old
+set forward_format = 'Fwd: %s'
 
 # Gmail-style keyboard shortcuts
 macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
