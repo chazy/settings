@@ -7,7 +7,7 @@ alias marc Marc Zyngier <marc.zyngier@arm.com>
 alias will Will Deacon <will.deacon@arm.com>
 alias peter Peter Maydell <peter.maydell@linaro.org>
 alias rusty Rusty Russell <rusty@rustcorp.com.au>
-alias alex Alexander Graf <agraf@suse.de>
+alias agraf Alexander Graf <agraf@suse.de>
 alias marcelo Marcelo Tosatti <mtosatti@redhat.com>
 alias rmk Russell King <linux@arm.linux.org.uk>
 alias linus Linus Torvalds <torvalds@linux-foundation.org>

@@ -12,8 +12,6 @@
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
 	from = Christoffer Dall <christoffer.dall@linaro.org>
-	cc = patches@linaro.org
-	cc = linaro-kernel@lists.linaro.org
 [stgit]
 	sender = Christoffer Dall <christoffer.dall@linaro.org>
 	smtpserver = smtp.gmail.com:587
