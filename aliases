@@ -15,3 +15,7 @@ alias catalin Catalin Marinas <catalin.marinas@arm.com>
 alias marko Mark Orvek <mark.orvek@linaro.org>
 alias serge Serge Broslavsky <serge.broslavsky@linaro.org>
 alias geoff Geoff Levand <geoff.levand@linaro.org>
+alias jason Jason Nieh <nieh@cs.columbia.edu>
+alias linaro-kernel linaro-kernel@lists.linaro.org
+alias linaro-patches patches@linaro.org
+alias lincc linaro-kernel, linaro-patches
