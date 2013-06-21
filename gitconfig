@@ -21,3 +21,6 @@
 	default = upstream
 [core]
 	excludesfile = ~/.gitignore
+[alias]
+	branchdate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads/
+	remotedate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/remotes/$1
