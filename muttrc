@@ -60,6 +60,9 @@ bind pager \cd half-down
 bind pager \cf next-page
 bind pager \cu half-up
 bind pager \cb previous-page
+bind pager \ce next-line
+bind pager \cy previous-line
+bind pager d next-line
 bind pager <down> next-line
 bind pager <up> previous-line
 bind pager <left> exit
