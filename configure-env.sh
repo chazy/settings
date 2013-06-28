@@ -13,6 +13,17 @@ echo -e "Ensuring you have the required packages"
 echo -e "======================================="
 sudo apt-get install zsh tmux vim git curl cscope build-essential gcc-4.6-arm-linux-gnueabi minicom libncurses-dev mutt offlineimap msmtp
 
+echo -e "\nTaking care of your git config"
+echo -e "=============================="
+if [[ ! -f ~/.gitconfig ]]; then
+	cd $HOME
+	ln -s .settings/gitconfig .gitconfig
+fi
+if [[ ! -f ~/.gitignore ]]; then
+	cd $HOME
+	ln -s .settings/gitignore .gitignore
+fi
+
 echo -e "\nTaking care of your vim config"
 echo -e "=============================="
 
