@@ -1,6 +1,7 @@
 alias lakml linux-arm-kernel@lists.infradead.org
 alias kvm kvm@vger.kernel.org
 alias lkml linux-kernel@vger.kernel.org
+alias linux-next linux-next@vger.kernel.org
 alias kvmarm kvmarm@lists.cs.columbia.edu
 alias linux-omap linux-omap@vger.kernel.org
 alias marc Marc Zyngier <marc.zyngier@arm.com>
@@ -23,3 +24,7 @@ alias linaro-kernel linaro-kernel@lists.linaro.org
 alias linaro-patches patches@linaro.org
 alias lincc linaro-kernel, linaro-patches
 alias marko Mark Orvek <mark.orvek@linaro.org>
+alias paolo Paolo Bonzini <pbonzini@redhat.com>
+alias gleb Gleb Natapov <gleb@redhat.com>
+alias kate Kate Stewart <kate.stewart@linaro.org>
+alias stephen Stephen Rothwell <sfr@canb.auug.org.au>
