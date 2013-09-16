@@ -23,7 +23,7 @@ remotepass = secret
 realdelete = no
 cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 
-folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
+folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*lxc-devel$|.*INBOX$)', foldername)
 
 nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 	re.sub('.*Drafts$', 'drafts',
@@ -31,6 +31,7 @@ nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 	re.sub('.*Starred$', 'flagged',
 	re.sub('.*Trash$', 'trash',
 	re.sub('.*All Mail$', 'archive',
+	re.sub('.*lxc-devl$', 'lxc-devel',
 	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))
 
 
@@ -42,7 +43,7 @@ nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 [Account linaro]
 localrepository = local_linaro
 remoterepository = remote_linaro
-maxage = 90
+maxage = 365
 
 [Repository local_linaro]
 type = Maildir
