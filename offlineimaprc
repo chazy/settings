@@ -21,7 +21,8 @@ type = Gmail
 remoteuser = christofferdall@christofferdall.dk
 remotepass = secret
 realdelete = no
-cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+#cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 
 folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
 
@@ -53,7 +54,8 @@ type = Gmail
 remoteuser = christoffer.dall@linaro.org
 remotepass = secret
 realdelete = no
-cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+#cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 
 folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
 
