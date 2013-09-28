@@ -17,9 +17,24 @@ alias serge Serge Broslavsky <serge.broslavsky@linaro.org>
 alias markb Mark Burton <mark.burton@greensocs.com>
 alias fred Fred Konrad <fred.konrad@greensocs.com>
 alias geoff Geoff Levand <geoff.levand@linaro.org>
-alias kvmminutes marc, peter, richard, serge, markb, fred, geoff
+alias kvmminutes marc, peter, richard, serge, markb, fred
 alias jason Jason Nieh <nieh@cs.columbia.edu>
+alias nieh Jason Nieh <nieh@cs.columbia.edu>
 alias linaro-kernel linaro-kernel@lists.linaro.org
 alias linaro-patches patches@linaro.org
 alias lincc linaro-kernel, linaro-patches
 alias marko Mark Orvek <mark.orvek@linaro.org>
+alias gleb Gleb Natapov <gleb@redhat.com>
+alias paolo Paolo Bonzini <pbonzini@redhat.com>
+alias scapper Steve Capper <steve.capper@linaro.org>
+alias anup Anup Patel <anup.patel@linaro.org>
+alias pranav Pranavkumar Sawargaonkar <pranavkumar@linaro.org>
+alias andre Andre Przywara <andre.przywara@linaro.org>
+alias claudio Claudio Fontana <claudio.fontana@linaro.org>
+alias kristine Kristine Dill <kristine.dill@linaro.org>
+alias qemu-devel qemu-devel@nongnu.org
+alias abennee Alex Bennee <alex@bennee.com>
+alias stefano Stefano Stabellini <stefano.stabellini@eu.citrix.com>
+alias jeremy \"Jeremy C. Andrus\" <jeremya@cs.columbia.edu>
+alias ian Ian Campbell <ijc@hellion.org.uk>
+alias olof Olof Johansson <olof@lixom.net>
