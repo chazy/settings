@@ -1,6 +1,7 @@
 alias lakml linux-arm-kernel@lists.infradead.org
 alias kvm kvm@vger.kernel.org
 alias lkml linux-kernel@vger.kernel.org
+alias linux-next linux-next@vger.kernel.org
 alias kvmarm kvmarm@lists.cs.columbia.edu
 alias linux-omap linux-omap@vger.kernel.org
 alias marc Marc Zyngier <marc.zyngier@arm.com>
@@ -38,3 +39,10 @@ alias stefano Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 alias jeremy \"Jeremy C. Andrus\" <jeremya@cs.columbia.edu>
 alias ian Ian Campbell <ijc@hellion.org.uk>
 alias olof Olof Johansson <olof@lixom.net>
+alias kate Kate Stewart <kate.stewart@linaro.org>
+alias stephen Stephen Rothwell <sfr@canb.auug.org.au>
+alias scott Scott Bambrough <scott.bambrough@linaro.org>
+alias fathi Fathi Boudra <fathi.boudra@linaro.org>
+alias ilias Ilias Biris <ilias.biris@linaro.org>
+alias andrea Andrea Gallo <andrea.gallo@linaro.org>
+alias oren Oren Laadan <orenlaadan@gmail.com>

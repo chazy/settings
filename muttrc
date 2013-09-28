@@ -25,6 +25,7 @@ set copy = no
 # Basic config
 set certificate_file=~/.mutt/certificates
 set alias_file=~/.settings/aliases
+set signature=~/.settings/signature
 source $alias_file
 set move = no
 set include
