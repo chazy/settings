@@ -12,6 +12,7 @@
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
 	from = Christoffer Dall <christoffer.dall@linaro.org>
+	chainreplyto = false
 [stgit]
 	sender = Christoffer Dall <christoffer.dall@linaro.org>
 	smtpserver = smtp.gmail.com:587
@@ -24,3 +25,9 @@
 [alias]
 	branchdate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads/
 	remotedate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/remotes/$1
+[stgit "color"]
+	# Specify output colors for series commands
+	applied = green_foreground
+	current = red_foreground
+	unapplied = white_foreground
+	hidden = cyan_foreground
