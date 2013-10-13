@@ -32,7 +32,6 @@ nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 	re.sub('.*Starred$', 'flagged',
 	re.sub('.*Trash$', 'trash',
 	re.sub('.*All Mail$', 'archive',
-	re.sub('.*lxc-devl$', 'lxc-devel',
 	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))
 
 
