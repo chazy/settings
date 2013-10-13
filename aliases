@@ -1,5 +1,7 @@
 alias lakml linux-arm-kernel@lists.infradead.org
 alias kvm kvm@vger.kernel.org
+alias kvm-ppc kvm-ppc@vger.kernel.org
+alias kvm-ia64 kvm-ia64@vger.kernel.org
 alias lkml linux-kernel@vger.kernel.org
 alias linux-next linux-next@vger.kernel.org
 alias kvmarm kvmarm@lists.cs.columbia.edu
