@@ -45,6 +45,7 @@ unset mark_old		# don't mark new messages as old
 set forward_format = 'Fwd: %s'
 
 # Gmail-style keyboard shortcuts
+macro index,pager gl "<change-folder>=lakml<enter>" "Go to lakml"
 macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent<enter>" "Go to sent"
@@ -79,6 +80,10 @@ bind index ~ previous-unread
 # Other shortcuts
 bind index,pager R group-reply
 bind index h noop
+
+# Other shortcuts
+bind index - collapse-thread
+bind index _ collapse-all
 
 # Set color scheme
 source ~/.mutt-colors.muttrc
