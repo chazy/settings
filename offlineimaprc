@@ -57,7 +57,7 @@ realdelete = no
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 #cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 
-folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*KVM ARM$|.*INBOX$)', foldername)
+folderfilter = lambda foldername: re.search('(.*Drafts$|.*Sent Mail$|.*Starred$|.*lakml$|.*KVM ARM$|.*INBOX$)', foldername)
 
 nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 	re.sub('.*Drafts$', 'drafts',
@@ -65,4 +65,5 @@ nametrans = lambda folder: re.sub('.*Spam$', 'spam',
 	re.sub('.*Starred$', 'flagged',
 	re.sub('.*Trash$', 'trash',
 	re.sub('.*All Mail$', 'archive',
-	re.sub('.*KVM ARM$', 'kvmarm', folder,)))))))
+	re.sub('.*lakml$', 'lakml',
+	re.sub('.*KVM ARM$', 'kvmarm', folder,))))))))
