@@ -11,7 +11,9 @@ fi
 
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
-sudo apt-get install zsh tmux vim git curl cscope build-essential gcc-4.6-arm-linux-gnueabi minicom libncurses-dev mutt offlineimap msmtp
+sudo apt-get install zsh tmux vim git curl cscope \
+	build-essential gcc-4.6-arm-linux-gnueabi \
+	minicom libncurses-dev mutt offlineimap msmtp python-pip
 
 echo -e "\nTaking care of your git config"
 echo -e "=============================="
@@ -87,6 +89,7 @@ if [[ ! -f ~/.muttrc ]]; then
 	chmod a+x ~/bin/mailrun.sh
 	cp .settings/msmtprc ~/.msmtprc
 	cp .settings/offlineimaprc ~/.offlineimaprc
+	sudo pip install goobook
 	ln -s .settings/goobookrc ~/.goobookrc
 	ln -s .settings/netrc ~/.netrc
 	eche -e "\n\n           --- NOTE ---         "
