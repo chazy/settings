@@ -91,7 +91,7 @@ if [[ ! -f ~/.muttrc ]]; then
 	cp .settings/offlineimaprc ~/.offlineimaprc
 	sudo pip install goobook
 	ln -s .settings/goobookrc ~/.goobookrc
-	ln -s .settings/netrc ~/.netrc
+	cp .settings/netrc ~/.netrc
 	eche -e "\n\n           --- NOTE ---         "
 	echo "Replace 'secret' with your actual password in:"
 	echo -e "    ~/.offlineimaprc"
