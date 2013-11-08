@@ -87,9 +87,13 @@ if [[ ! -f ~/.muttrc ]]; then
 	chmod a+x ~/bin/mailrun.sh
 	cp .settings/msmtprc ~/.msmtprc
 	cp .settings/offlineimaprc ~/.offlineimaprc
+	ln -s .settings/goobookrc ~/.goobookrc
+	ln -s .settings/netrc ~/.netrc
+	eche -e "\n\n           --- NOTE ---         "
 	echo "Replace 'secret' with your actual password in:"
-	echo "    ~/.offlineimaprc"
-	echo "    ~/.msmtprc"
+	echo -e "    ~/.offlineimaprc"
+	echo -e "    ~/.msmtprc\n\n"
+	echo -e "    ~/.netrc\n\n"
 else
 	echo -e "existing .muttrc, moving on...\n"
 fi

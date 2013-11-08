@@ -1,0 +1,3 @@
+machine google.com
+	login christoffer.dall@linaro.org
+	password super_secret

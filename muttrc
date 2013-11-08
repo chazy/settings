@@ -44,6 +44,9 @@ bind editor <space> noop
 unset mark_old		# don't mark new messages as old
 set forward_format = 'Fwd: %s'
 
+# Goobook address lookups
+set query_command="goobook query '%s'"
+
 # Gmail-style keyboard shortcuts
 macro index,pager gl "<change-folder>=lakml<enter>" "Go to lakml"
 macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
