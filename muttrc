@@ -25,12 +25,12 @@ set copy = no
 # Basic config
 set certificate_file=~/.mutt/certificates
 set alias_file=~/.settings/aliases
-set signature=~/.settings/signature
+#set signature=~/.settings/signature
 source $alias_file
 set move = no
 set include
 set sort = 'threads'
-set sort_aux = 'reverse-last-date-received'
+#set sort_aux = 'reverse-last-date-received'
 set auto_tag = yes
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
@@ -49,6 +49,8 @@ set query_command="goobook query '%s'"
 
 # Gmail-style keyboard shortcuts
 macro index,pager gl "<change-folder>=lakml<enter>" "Go to lakml"
+macro index,pager ga "<change-folder>=lakml<enter>" "Go to lakml"
+macro index,pager gv "<change-folder>=lakml<enter>" "Go to lakml"
 macro index,pager gk "<change-folder>=kvmarm<enter>" "Go to kvmarm"
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to INBOX"
 macro index,pager gs "<change-folder>=sent<enter>" "Go to sent"
