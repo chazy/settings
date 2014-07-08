@@ -1,19 +1,13 @@
 #!/bin/bash
 
-echo -n "Use writeable git remotes (requires appropriate public SSH key) (y/N): "
-read WRITABLE
-
-if [[ "$WRITABLE" == "y" || "$WRITABLE" == "Y" ]]; then
-	GITHUB_URL="git@github.com:chazy"
-else
-	GITHUB_URL="git://github.com/chazy"
-fi
+GITHUB_URL="git://github.com/chazy"
 
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
 sudo apt-get install zsh tmux vim git curl cscope \
-	build-essential gcc-4.6-arm-linux-gnueabi \
-	minicom libncurses-dev mutt offlineimap msmtp python-pip
+	build-essential
+sudo apt-get build-dep qemu 
+sudo apt-get build-dep linux-image-$(uname -r)
 
 echo -e "\nTaking care of your git config"
 echo -e "=============================="
@@ -71,34 +65,4 @@ else
 	echo -e "existing .zshrc, moving on...\n"
 fi
 
-echo -e "\nTaking care of your mutt config"
-echo -e "===============================\n"
-if [[ ! -f ~/.muttrc ]]; then
-	cd $HOME
-	cd .settings
-	git submodule init
-	git submodule update
-	cd ..
-	cp .settings/muttrc .muttrc
-	mkdir -p .mutt/cache/bodies
-	mkdir -p .mutt/cache/headers
-	mkdir -p .mail/private
-	ln -s .settings/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc .mutt-colors.muttrc
-	mkdir -p .bin
-	cp .settings/mailrun.sh ~/bin/.
-	chmod a+x ~/bin/mailrun.sh
-	cp .settings/msmtprc ~/.msmtprc
-	cp .settings/offlineimaprc ~/.offlineimaprc
-	sudo pip install goobook
-	ln -s .settings/goobookrc ~/.goobookrc
-	cp .settings/netrc ~/.netrc
-	eche -e "\n\n           --- NOTE ---         "
-	echo "Replace 'secret' with your actual password in:"
-	echo -e "    ~/.offlineimaprc"
-	echo -e "    ~/.msmtprc\n\n"
-	echo -e "    ~/.netrc\n\n"
-else
-	echo -e "existing .muttrc, moving on...\n"
-fi
-
-echo "Done, happy coding!"
+echo "Done, happy hacking!"
