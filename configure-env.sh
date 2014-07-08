@@ -4,10 +4,10 @@ GITHUB_URL="git://github.com/chazy"
 
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
-sudo apt-get install zsh tmux vim git curl cscope \
-	build-essential
-sudo apt-get build-dep qemu 
-sudo apt-get build-dep linux-image-$(uname -r)
+sudo apt-get -y --force-yes install \
+	zsh tmux vim git curl cscope build-essential
+sudo apt-get -y --force-yes build-dep qemu 
+sudo apt-get -y --force-yes build-dep linux-image-$(uname -r)
 
 echo -e "\nTaking care of your git config"
 echo -e "=============================="
