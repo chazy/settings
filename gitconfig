@@ -13,6 +13,7 @@
 	aliasfiletype = mutt
 	from = Christoffer Dall <christoffer.dall@linaro.org>
 	chainreplyto = false
+	smtpsslcertpath = /etc/ssl/certs
 [stgit]
 	sender = Christoffer Dall <christoffer.dall@linaro.org>
 	smtpserver = smtp.gmail.com:587
