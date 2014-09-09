@@ -36,7 +36,7 @@ alias andre Andre Przywara <andre.przywara@arm.com>
 alias claudio Claudio Fontana <claudio.fontana@linaro.org>
 alias kristine Kristine Dill <kristine.dill@linaro.org>
 alias qemu-devel qemu-devel@nongnu.org
-alias abennee Alex Bennee <alex@bennee.com>
+alias ajb-linaro Alex Bennee <alex.bennee@linaro.org>
 alias stefano Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 alias jeremy \"Jeremy C. Andrus\" <jeremya@cs.columbia.edu>
 alias ian Ian Campbell <ijc@hellion.org.uk>
@@ -55,3 +55,4 @@ alias afaerber Andreas Faerber <afaerber@suse.de>
 alias jungseok Jungseok Lee <jays.lee@samsung.com>
 alias mario Mario Smarduch <m.smarduch@samsung.com>
 alias eric Eric Auger <eric.auger@linaro.org>
+alias ard Ard Biesheuvel <ard.biesheuvel@linaro.org>
