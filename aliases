@@ -30,7 +30,7 @@ alias marko Mark Orvek <mark.orvek@linaro.org>
 alias gleb Gleb Natapov <gleb@kernel.org>
 alias paolo Paolo Bonzini <pbonzini@redhat.com>
 alias scapper Steve Capper <steve.capper@linaro.org>
-alias anup Anup Patel <anup.patel@linaro.org>
+alias anup Anup Patel <anup@brainfault.org>
 alias pranav Pranavkumar Sawargaonkar <pranavkumar@linaro.org>
 alias andre Andre Przywara <andre.przywara@arm.com>
 alias claudio Claudio Fontana <claudio.fontana@linaro.org>
@@ -38,7 +38,7 @@ alias kristine Kristine Dill <kristine.dill@linaro.org>
 alias qemu-devel qemu-devel@nongnu.org
 alias ajb-linaro Alex Bennee <alex.bennee@linaro.org>
 alias stefano Stefano Stabellini <stefano.stabellini@eu.citrix.com>
-alias jeremy \"Jeremy C. Andrus\" <jeremya@cs.columbia.edu>
+alias jeremy \"Jeremy C. Andrus\" <jchristian.andrus@gmail.com>
 alias ian Ian Campbell <ijc@hellion.org.uk>
 alias olof Olof Johansson <olof@lixom.net>
 alias kate Kate Stewart <kate.stewart@linaro.org>
@@ -56,3 +56,5 @@ alias jungseok Jungseok Lee <jays.lee@samsung.com>
 alias mario Mario Smarduch <m.smarduch@samsung.com>
 alias eric Eric Auger <eric.auger@linaro.org>
 alias ard Ard Biesheuvel <ard.biesheuvel@linaro.org>
+alias joel Joel Schopp <joel.schopp@amd.com>
+alias broonie Mark Brown <broonie@linaro.org>

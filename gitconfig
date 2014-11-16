@@ -32,3 +32,7 @@
 	current = red_foreground
 	unapplied = white_foreground
 	hidden = cyan_foreground
+[rerere]
+	enabled = true
+[grep]
+	lineNumber = true
