@@ -11,9 +11,17 @@ fi
 
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
-sudo apt-get install zsh tmux vim git curl cscope \
-	build-essential gcc-4.6-arm-linux-gnueabi \
-	minicom libncurses-dev mutt offlineimap msmtp python-pip
+sudo apt-get -y install zsh tmux vim git curl cscope \
+	minicom mutt offlineimap msmtp python-pip
+
+sudo apt-get -y install build-essential libncurses5-dev 
+sudo apt-get build-dep linux-generic
+sudo apt-get build-dep qemu
+
+grep -q 'Intel' /proc/cpuinfo
+if [[ $? == 0 ]]; then
+	sudo apt-get -y install gcc-arm-linux-gnueabihf
+fi
 
 echo -e "\nTaking care of your git config"
 echo -e "=============================="
@@ -84,7 +92,7 @@ if [[ ! -f ~/.muttrc ]]; then
 	mkdir -p .mutt/cache/headers
 	mkdir -p .mail/private
 	ln -s .settings/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc .mutt-colors.muttrc
-	mkdir -p .bin
+	mkdir -p ~/bin
 	cp .settings/mailrun.sh ~/bin/.
 	chmod a+x ~/bin/mailrun.sh
 	cp .settings/msmtprc ~/.msmtprc
@@ -92,7 +100,7 @@ if [[ ! -f ~/.muttrc ]]; then
 	sudo pip install goobook
 	ln -s .settings/goobookrc ~/.goobookrc
 	cp .settings/netrc ~/.netrc
-	eche -e "\n\n           --- NOTE ---         "
+	echo -e "\n\n           --- NOTE ---         "
 	echo "Replace 'secret' with your actual password in:"
 	echo -e "    ~/.offlineimaprc"
 	echo -e "    ~/.msmtprc\n\n"
