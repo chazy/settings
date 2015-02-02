@@ -15,8 +15,8 @@ sudo apt-get -y install zsh tmux vim git curl cscope \
 	minicom mutt offlineimap msmtp python-pip
 
 sudo apt-get -y install build-essential libncurses5-dev 
-sudo apt-get build-dep linux-generic
-sudo apt-get build-dep qemu
+sudo apt-get -y build-dep linux-generic
+sudo apt-get -y build-dep qemu
 
 grep -q 'Intel' /proc/cpuinfo
 if [[ $? == 0 ]]; then
