@@ -8,7 +8,7 @@
 	smtpencryption = tls
 	smtpserver = smtp.gmail.com
 	smtpuser = christoffer.dall@linaro.org
-	smtppass = vfgthvtqidvnmnqr
+	smtppass = <changeme>
 	smtpserverport = 587
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
