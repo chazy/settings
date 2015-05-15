@@ -27,6 +27,9 @@
 [alias]
 	branchdate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads/
 	remotedate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/remotes/$1
+	diffstat = diff --stat
+	whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+	pwhatis = show -s --pretty='tformat:%h, %s, %ad' --date=short
 [stgit "color"]
 	# Specify output colors for series commands
 	applied = green_foreground
