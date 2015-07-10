@@ -49,7 +49,7 @@ fi
 echo -e "Ensuring you have the required packages"
 echo -e "======================================="
 sudo apt-get -y install zsh tmux vim git curl cscope \
-	minicom python-pip htop
+	minicom python-pip htop mosh
 
 sudo apt-get -y install build-essential libncurses5-dev 
 sudo apt-get -y build-dep linux-generic
