@@ -33,7 +33,7 @@ alias scapper Steve Capper <steve.capper@linaro.org>
 alias anup Anup Patel <anup@brainfault.org>
 alias pranav Pranavkumar Sawargaonkar <pranavkumar@linaro.org>
 alias andre Andre Przywara <andre.przywara@arm.com>
-alias claudio Claudio Fontana <claudio.fontana@linaro.org>
+alias claudio Claudio Fontana <claudio.fontana@huawei.com>
 alias kristine Kristine Dill <kristine.dill@linaro.org>
 alias qemu-devel qemu-devel@nongnu.org
 alias ajb-linaro Alex Bennee <alex.bennee@linaro.org>
@@ -61,3 +61,4 @@ alias broonie Mark Brown <broonie@linaro.org>
 alias rutland Mark Rutland <mark.rutland@arm.com>
 alias laszlo Laszlo Ersek <lersek@redhat.com>
 alias drew Andrew Jones <drjones@redhat.com>
+alias jan Jan Kiszka <jan.kiszka@web.de>
