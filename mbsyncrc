@@ -1,0 +1,113 @@
+##########################################################################
+# Global Options
+
+Create Slave
+
+###########################################################################
+# Imap Accounts
+#
+IMAPAccount linaro
+# Address to connect to
+Host imap.gmail.com
+User christoffer.dall@linaro.org
+Pass secret
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+IMAPAccount personal
+# Address to connect to
+Host imap.gmail.com
+User christofferdall@christofferdall.dk
+Pass secret
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+
+
+###########################################################################
+# Linaro Configuration
+#
+
+IMAPStore linaro-remote
+Account linaro
+
+MaildirStore linaro-local
+Path ~/.mail/linaro/
+Inbox ~/.mail/linaro/INBOX
+
+Channel linaro-inbox
+Master :linaro-remote:
+Slave :linaro-local:
+Patterns "INBOX"
+
+Channel linaro-drafts
+Master :linaro-remote:"[Gmail]/Drafts"
+Slave :linaro-local:drafts
+
+Channel linaro-sent
+Master :linaro-remote:"[Gmail]/Sent Mail"
+Slave :linaro-local:sent
+
+Channel linaro-starred
+Master :linaro-remote:"[Gmail]/Starred"
+Slave :linaro-local:flagged
+
+Channel linaro-kvmarm
+Master :linaro-remote:"KVM ARM"
+Slave :linaro-local:kvmarm
+
+Channel linaro-kvm
+Master :linaro-remote:"KVM"
+Slave :linaro-local:kvm
+MaxMessages 10000
+
+Channel linaro-lakml
+Master :linaro-remote:"lakml"
+Slave :linaro-local:lakml
+MaxMessages 10000
+
+Group linaro
+Channel linaro-inbox
+Channel linaro-drafts
+Channel linaro-sent
+Channel linaro-starred
+Channel linaro-kvmarm
+Channel linaro-lakml
+Channel linaro-kvm
+
+
+
+###########################################################################
+# Personal Account Configuration
+#
+
+IMAPStore personal-remote
+Account personal
+
+MaildirStore personal-local
+Path ~/.mail/personal/
+Inbox ~/.mail/personal/INBOX
+
+Channel personal-inbox
+Master :personal-remote:
+Slave :personal-local:
+Patterns "INBOX"
+MaxMessages 10000
+
+Channel personal-drafts
+Master :personal-remote:"[Gmail]/Drafts"
+Slave :personal-local:drafts
+
+Channel personal-sent
+Master :personal-remote:"[Gmail]/Sent Mail"
+Slave :personal-local:sent
+
+Channel personal-starred
+Master :personal-remote:"[Gmail]/Starred"
+Slave :personal-local:flagged
+
+Group personal
+Channel personal-inbox
+Channel personal-drafts
+Channel personal-sent
+Channel personal-starred

@@ -137,6 +137,7 @@ if [[ $MAILCONFIG == true ]]; then
 		chmod a+x ~/bin/mailrun.sh
 		cp .settings/msmtprc ~/.msmtprc
 		cp .settings/offlineimaprc ~/.offlineimaprc
+		cp .settings/mbsyncrc ~/.mbsyncrc
 		sudo pip install goobook
 		ln -s .settings/goobookrc ~/.goobookrc
 		cp .settings/netrc ~/.netrc
