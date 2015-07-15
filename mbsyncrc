@@ -39,6 +39,7 @@ Channel linaro-inbox
 Master :linaro-remote:
 Slave :linaro-local:
 Patterns "INBOX"
+MaxMessages 10000
 
 Channel linaro-drafts
 Master :linaro-remote:"[Gmail]/Drafts"
@@ -47,6 +48,7 @@ Slave :linaro-local:drafts
 Channel linaro-sent
 Master :linaro-remote:"[Gmail]/Sent Mail"
 Slave :linaro-local:sent
+MaxMessages 10000
 
 Channel linaro-starred
 Master :linaro-remote:"[Gmail]/Starred"
@@ -101,6 +103,7 @@ Slave :personal-local:drafts
 Channel personal-sent
 Master :personal-remote:"[Gmail]/Sent Mail"
 Slave :personal-local:sent
+MaxMessages 10000
 
 Channel personal-starred
 Master :personal-remote:"[Gmail]/Starred"
