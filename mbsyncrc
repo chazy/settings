@@ -32,14 +32,16 @@ IMAPStore linaro-remote
 Account linaro
 
 MaildirStore linaro-local
-Path ~/.mail/linaro/
-Inbox ~/.mail/linaro/INBOX
+Path ~/.mail-mbsync/linaro/
+Inbox ~/.mail-mbsync/linaro/INBOX
+MaxSize 5m
 
 Channel linaro-inbox
 Master :linaro-remote:
 Slave :linaro-local:
 Patterns "INBOX"
 MaxMessages 10000
+ExpireUnread no
 
 Channel linaro-drafts
 Master :linaro-remote:"[Gmail]/Drafts"
@@ -49,6 +51,7 @@ Channel linaro-sent
 Master :linaro-remote:"[Gmail]/Sent Mail"
 Slave :linaro-local:sent
 MaxMessages 10000
+ExpireUnread no
 
 Channel linaro-starred
 Master :linaro-remote:"[Gmail]/Starred"
@@ -57,16 +60,19 @@ Slave :linaro-local:flagged
 Channel linaro-kvmarm
 Master :linaro-remote:"KVM ARM"
 Slave :linaro-local:kvmarm
+ExpireUnread no
 
 Channel linaro-kvm
 Master :linaro-remote:"KVM"
 Slave :linaro-local:kvm
 MaxMessages 10000
+ExpireUnread yes
 
 Channel linaro-lakml
 Master :linaro-remote:"lakml"
 Slave :linaro-local:lakml
 MaxMessages 10000
+ExpireUnread yes
 
 Group linaro
 Channel linaro-inbox
@@ -87,14 +93,16 @@ IMAPStore personal-remote
 Account personal
 
 MaildirStore personal-local
-Path ~/.mail/personal/
-Inbox ~/.mail/personal/INBOX
+Path ~/.mail-mbsync/personal/
+Inbox ~/.mail-mbsync/personal/INBOX
+MaxSize 512k
 
 Channel personal-inbox
 Master :personal-remote:
 Slave :personal-local:
 Patterns "INBOX"
 MaxMessages 10000
+ExpireUnread no
 
 Channel personal-drafts
 Master :personal-remote:"[Gmail]/Drafts"
@@ -104,6 +112,7 @@ Channel personal-sent
 Master :personal-remote:"[Gmail]/Sent Mail"
 Slave :personal-local:sent
 MaxMessages 10000
+ExpireUnread no
 
 Channel personal-starred
 Master :personal-remote:"[Gmail]/Starred"
