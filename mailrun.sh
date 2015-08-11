@@ -1,20 +1,23 @@
 #!/bin/bash
 
-count=5
-pid=0
+LOGFILE=/var/log/mailrun/mailrun.log
+RETAIN_NUM_LINES=500
 
-while [[ $count -gt 0 ]]; do
-	read -r pid < ~/.offlineimap/pid
+function logsetup {
+    TMP=$(tail -n $RETAIN_NUM_LINES $LOGFILE 2>/dev/null) && echo "${TMP}" > $LOGFILE
+    exec > >(tee -a $LOGFILE)
+    exec 2>&1
+}
 
-	if ps $pid &>/dev/null; then
-		echo "offlineimap ($pid): another instance running." >&2
-		count=$((count - 1))
-		sleep 5
-		continue
-	fi
+function log {
+    echo "[$(date)]: $*"
+}
 
-	break
-done
-kill -9 $pid &>/dev/null
+logsetup
 
-offlineimap -o -u quiet &
+if ps -ef | grep -v grep | grep mbsync ; then
+	echo "mbsync already running. exiting."
+	exit 0
+fi
+
+/usr/local/bin/mbsync -q -V -a
