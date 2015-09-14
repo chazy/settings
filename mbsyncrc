@@ -75,14 +75,27 @@ Slave :linaro-local:lakml
 MaxMessages 10000
 ExpireUnread yes
 
+Channel linaro-qemu
+Master :linaro-remote:"qemu-devel"
+Slave :linaro-local:qemu-devel
+MaxMessages 10000
+ExpireUnread yes
+
+Channel linaro-weekly
+Master :linaro-remote:"virt-weekly"
+Slave :linaro-local:virt-weekly
+ExpireUnread no
+
 Group linaro
 Channel linaro-inbox
 Channel linaro-drafts
 Channel linaro-sent
 Channel linaro-starred
 Channel linaro-kvmarm
-Channel linaro-lakml
 Channel linaro-kvm
+Channel linaro-lakml
+Channel linaro-qemu
+Channel linaro-weekly
 
 
 
