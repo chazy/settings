@@ -12,11 +12,11 @@
 	smtpserverport = 587
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
-	from = Christoffer Dall <christoffer.dall@linaro.org>
+	from = Christoffer Dall <cdall@linaro.org>
 	chainreplyto = false
 	smtpsslcertpath = /etc/ssl/certs
 [stgit]
-	sender = Christoffer Dall <christoffer.dall@linaro.org>
+	sender = Christoffer Dall <cdall@linaro.org>
 	smtpserver = smtp.gmail.com:587
 	smtptls = yes
 	smtpuser = christoffer.dall@linaro.org
