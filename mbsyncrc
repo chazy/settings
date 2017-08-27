@@ -47,6 +47,7 @@ ExpireUnread no
 Channel linaro-drafts
 Master :linaro-remote:"[Gmail]/Drafts"
 Slave :linaro-local:drafts
+Expunge Both
 
 Channel linaro-sent
 Master :linaro-remote:"[Gmail]/Sent Mail"
@@ -69,15 +70,21 @@ Slave :linaro-local:kvm
 MaxMessages 10000
 ExpireUnread yes
 
-Channel linaro-lakml
-Master :linaro-remote:"lakml"
-Slave :linaro-local:lakml
-MaxMessages 10000
-ExpireUnread yes
+#Channel linaro-lakml
+#Master :linaro-remote:"lakml"
+#Slave :linaro-local:lakml
+#MaxMessages 80000
+#ExpireUnread yes
 
 Channel linaro-qemu
 Master :linaro-remote:"qemu-devel"
 Slave :linaro-local:qemu-devel
+MaxMessages 10000
+ExpireUnread yes
+
+Channel linaro-libvirt
+Master :linaro-remote:"libvir-list"
+Slave :linaro-local:libvir-list
 MaxMessages 10000
 ExpireUnread yes
 
@@ -95,6 +102,7 @@ Channel linaro-kvmarm
 Channel linaro-kvm
 Channel linaro-lakml
 Channel linaro-qemu
+Channel linaro-libvirt
 Channel linaro-weekly
 
 
