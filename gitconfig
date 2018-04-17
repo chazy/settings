@@ -6,20 +6,12 @@
 	autosquash = true
 [sendemail]
 	smtpencryption = tls
-	smtpserver = smtp.gmail.com
-	smtpuser = christoffer.dall@linaro.org
-	smtppass = <changeme>
 	smtpserverport = 587
 	aliasesfile = ~/.settings/aliases
 	aliasfiletype = mutt
-	from = Christoffer Dall <cdall@linaro.org>
+	from = Christoffer Dall <christoffer.dall@arm.com>
 	chainreplyto = false
 	smtpsslcertpath = /etc/ssl/certs
-[stgit]
-	sender = Christoffer Dall <cdall@linaro.org>
-	smtpserver = smtp.gmail.com:587
-	smtptls = yes
-	smtpuser = christoffer.dall@linaro.org
 [push]
 	default = upstream
 [core]
