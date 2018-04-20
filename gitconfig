@@ -1,3 +1,6 @@
+[user]
+	name = "Christoffer Dall"
+	email = "christoffer.dall@arm.com"
 [color]
 	ui = auto
 [log]
@@ -16,6 +19,7 @@
 	default = upstream
 [core]
 	excludesfile = ~/.gitignore
+	editor = vim
 [alias]
 	branchdate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads/
 	remotedate = !git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/remotes/$1
