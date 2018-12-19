@@ -1,6 +1,7 @@
 [user]
 	name = "Christoffer Dall"
 	email = "christoffer.dall@arm.com"
+	signingKey = EDE9D772
 [color]
 	ui = auto
 [log]
@@ -15,6 +16,8 @@
 	from = Christoffer Dall <christoffer.dall@arm.com>
 	chainreplyto = false
 	smtpsslcertpath = /etc/ssl/certs
+	smtpuser =
+	smtpserver = "/usr/bin/msmtp"
 [push]
 	default = upstream
 [core]

@@ -41,22 +41,13 @@ alias stefano Stefano Stabellini <stefano.stabellini@eu.citrix.com>
 alias jeremy \"Jeremy C. Andrus\" <jchristian.andrus@gmail.com>
 alias ian Ian Campbell <ijc@hellion.org.uk>
 alias olof Olof Johansson <olof@lixom.net>
-alias kate Kate Stewart <kate.stewart@linaro.org>
 alias stephen Stephen Rothwell <sfr@canb.auug.org.au>
-alias scott Scott Bambrough <scott.bambrough@linaro.org>
-alias fathi Fathi Boudra <fathi.boudra@linaro.org>
-alias ilias Ilias Biris <ilias.biris@linaro.org>
 alias andrea Andrea Gallo <andrea.gallo@linaro.org>
 alias oren Oren Laadan <orenlaadan@gmail.com>
-alias julien Julien Grall <julien.grall@linaro.org>
 alias wookey Wookey <wookey@wookware.org>
-alias ashwin Ashwin Chaugule <ashwin.chaugule@linaro.org>
 alias afaerber Andreas Faerber <afaerber@suse.de>
-alias jungseok Jungseok Lee <jays.lee@samsung.com>
-alias mario Mario Smarduch <m.smarduch@samsung.com>
 alias eric Eric Auger <eric.auger@redhat.com>
 alias ard Ard Biesheuvel <ard.biesheuvel@linaro.org>
-alias joel Joel Schopp <joel.schopp@amd.com>
 alias broonie Mark Brown <broonie@linaro.org>
 alias rutland Mark Rutland <mark.rutland@arm.com>
 alias laszlo Laszlo Ersek <lersek@redhat.com>
@@ -73,3 +64,11 @@ alias shihwei Shih-Wei Li <shihwei@cs.columbia.edu>
 alias pekka Pekka Enberg <penberg@iki.fi>
 alias sboyd Stephen Boyd <stephen.boyd@linaro.org>
 alias stable <stable@vger.kernel.org>
+alias aleshi Alexander Shirshikov <alexander.shirshikov@arm.com>
+alias punit Punit Agrawal <punit.agrawal@arm.com>
+alias luke Luke Hall-Bland <luke.hall-bland@arm.com>
+alias matt Matt Evans <matt.evans@arm.com>
+alias bowmore-dev bowmore-dev@listhost.cambridge.arm.com
+alias gareth Gareth Stockwell <gareth.stockwell@arm.com>
+alias suzuki Suzuki K Poulose <suzuki.poulose@arm.com>
+alias dave Dave Martin <Dave.Martin@arm.com>
